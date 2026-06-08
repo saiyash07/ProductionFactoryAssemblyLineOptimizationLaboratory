@@ -15,6 +15,19 @@ Here is the assembly line and real-time operational telemetry in action during a
 ### 3. Continuous Simulation Logs and Metric Stream
 ![Active Run Stage 3](./screenshot_active_3.png)
 
+## Diagnostics HUD & Telemetry Logs
+
+The bottom telemetry panel displays the real-time health, performance diagnostics, and system output logs:
+
+![Diagnostics HUD](./screenshot_hud.png)
+
+- **Total Produced Units**: Tracks the total number of non-defective units successfully processed through all assembly stages.
+- **OEE % Rating (Overall Equipment Effectiveness)**: Calculated using the product of availability (uptime ratio), performance (line efficiency), and quality (ratio of good units to total processed units).
+- **Line Balance (LE %)**: Computes the assembly line balancing efficiency based on workstation cycle times, indicating how evenly tasks are distributed.
+- **Bottleneck Target**: Identifies the slow-running workstation that is currently bottlenecking the throughput.
+- **Latency & CSV Export**: Displays frame processing latency in milliseconds and offers a click-to-export functionality for downloading the full operational telemetry logs as a CSV.
+- **Real-Time Terminal Logs**: An integrated logger displaying detailed timestamped event streams (e.g. production run initializations, workstation resets, defect alerts, and stochastic machine failures).
+
 ## Key Features
 
 - **Real-Time Interactive Assembly Line**: Visualizes workstations, buffers, queues, and moving items (tokens) with status indicators:
@@ -23,14 +36,8 @@ Here is the assembly line and real-time operational telemetry in action during a
   - **Crimson (Blocked)**: The machine is idle because the downstream staging buffer is full.
   - **Grey (Broken)**: The machine is currently undergoing repairs.
 - **Factory Layout Customization**: Add new workstation nodes, edit workstation metrics (name, cycle times, buffer limits, defect rates), and delete nodes dynamically.
-- **Analytics & Diagnostics (HUD)**:
-  - **Total Produced Units**: The count of successfully finished products.
-  - **Overall Equipment Effectiveness (OEE %)**: Availability × Performance × Quality.
-  - **Line Balancing Efficiency (LE %)**: Efficiency rating calculated using task times.
-  - **Bottleneck Target Identification**: Highlights the current system bottleneck stage in real-time.
 - **Stochastic Failure Injections**: Simulate random machine breakdowns to test line resilience, or manually inject failures.
 - **Line Balancing Heuristics**: Auto-optimize workstation cycle times evenly to match average processing capabilities.
-- **Telemetry Export**: Export detailed system status logs to a CSV file.
 
 ## Technical Details
 
