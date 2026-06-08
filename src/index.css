@@ -1,0 +1,407 @@
+/* Times New Roman Global Typography Profile and Base Reset */
+:root {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt !important;
+  line-height: 1.4;
+  
+  /* Industrial control desk values - Professional Light Theme */
+  --bg-primary: #f5f6fa;
+  --bg-secondary: #ffffff;
+  --border-color: #bdc3c7;
+  --text-color: #2c3e50;
+  --steel-blue: #4682b4;
+  --amber: #f39c12;
+  --crimson: #c0392b;
+  --success: #27ae60;
+  --font-size-12pt: 12pt !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 12pt !important;
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+  overflow-x: hidden;
+  padding: 15px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--steel-blue);
+}
+
+/* Base App Layout */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 30px);
+  gap: 15px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Industrial Header Banner */
+.header-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  border-bottom: 4px solid var(--steel-blue);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-banner h1 {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.header-metadata {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  color: #7f8c8d;
+}
+
+/* Workspace Split */
+.main-workspace {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 15px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Premium Industrial Panel Styling */
+.control-panel, .stage-panel {
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.panel-header {
+  background-color: #ecf0f1;
+  padding: 10px 15px;
+  border-bottom: 2px solid var(--border-color);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.panel-content {
+  padding: 15px;
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Parametric Input Grid Form Controls */
+.form-section-title {
+  font-weight: bold;
+  border-bottom: 2px solid var(--steel-blue);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+/* Control buttons: tactile industrial console look */
+button {
+  background-color: #f8f9fa;
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.1s ease;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 1px 2px rgba(0,0,0,0.05);
+}
+
+button:hover:not(:disabled) {
+  background-color: #e2e6ea;
+  border-color: #7f8c8d;
+}
+
+button:active:not(:disabled) {
+  background-color: #dae0e5;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Action Specific Buttons */
+button.primary-run-btn {
+  background-color: var(--steel-blue);
+  color: white;
+  border-color: #34495e;
+}
+button.primary-run-btn:hover:not(:disabled) {
+  background-color: #3572a5;
+}
+
+button.danger-fail-btn {
+  background-color: var(--crimson);
+  color: white;
+  border-color: #7f231c;
+}
+button.danger-fail-btn:hover:not(:disabled) {
+  background-color: #a93226;
+}
+
+input, select {
+  background-color: #ffffff;
+  border: 2px solid var(--border-color);
+  color: var(--text-color);
+  padding: 4px 8px;
+  font-weight: bold;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: var(--steel-blue);
+  box-shadow: 0 0 3px rgba(70, 130, 180, 0.4);
+}
+
+/* Grid & Tables formatting */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 2px solid var(--border-color);
+  padding: 6px 8px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #ecf0f1;
+  font-weight: bold;
+}
+
+/* Visual Stage Viewport components */
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 25px;
+  background-color: #eaeded;
+  border: 2px dashed var(--border-color);
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Conveyor schematic row layout */
+.flow-row {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid var(--border-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  min-width: max-content;
+  position: relative;
+  border-radius: 4px;
+}
+
+/* Industrial Node Blocks */
+.flow-node {
+  border: 3px solid var(--border-color);
+  border-radius: 4px;
+  padding: 12px;
+  width: 160px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Solid status backgrounds representing status colors (not glowing dark-mode styles) */
+.node-state-normal {
+  border-color: var(--steel-blue);
+  background-color: #ebf5fb;
+}
+
+.node-state-starved {
+  border-color: var(--amber);
+  background-color: #fef9e7;
+}
+
+.node-state-blocked {
+  border-color: var(--crimson);
+  background-color: #fdedd0;
+}
+
+.node-state-broken {
+  border-color: #7f8c8d;
+  background-color: #f2f4f4;
+  opacity: 0.7;
+}
+
+.node-status-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  font-size: 8pt !important;
+  font-weight: bold;
+  color: white;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.badge-normal { background-color: var(--steel-blue); }
+.badge-starved { background-color: var(--amber); color: black; }
+.badge-blocked { background-color: var(--crimson); }
+.badge-broken { background-color: #7f8c8d; }
+
+/* Staging buffers grid slots view */
+.flow-buffer {
+  border: 2px solid var(--border-color);
+  background-color: #f8f9fa;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100px;
+  margin: 0 10px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.buffer-slots {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  justify-content: center;
+}
+
+.buffer-slot {
+  width: 16px;
+  height: 22px;
+  border: 2px solid var(--border-color);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buffer-slot.filled {
+  background-color: var(--steel-blue);
+  border-color: #34495e;
+}
+
+/* Vector paths / Connector lines */
+.connector-line {
+  height: 6px;
+  background: #bdc3c7;
+  width: 35px;
+  position: relative;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Transiting discrete tokens */
+.moving-token {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #2980b9;
+  border: 2px solid #1f618d;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7pt !important;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Bottom Telemetry HUD diagnostics terminal console */
+.telemetry-hud {
+  background-color: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  min-height: 200px;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.hud-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-bottom: 2px solid var(--border-color);
+  background-color: #ecf0f1;
+}
+
+.hud-metric-box {
+  padding: 10px 15px;
+  border-right: 2px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hud-metric-box:last-child {
+  border-right: none;
+}
+
+.metric-label {
+  color: #7f8c8d;
+  font-weight: bold;
+}
+
+.metric-value {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Status Terminal Output Stream */
+.terminal-logs {
+  background-color: #2c3e50;
+  flex: 1;
+  padding: 10px 15px;
+  overflow-y: auto;
+  font-family: monospace !important;
+  color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
