@@ -343,8 +343,6 @@ function App() {
       <header className="header-banner">
         <h1 style={{ fontSize: '14pt' }}>Production Factory Assembly Line Optimization Laboratory</h1>
         <div className="header-metadata">
-          <span>B.Tech CSE 2025-29</span>
-          <span>Semester II</span>
           <span style={{ fontWeight: 'bold', color: 'var(--steel-blue)' }}>Made by Saiyash Poojari</span>
         </div>
       </header>

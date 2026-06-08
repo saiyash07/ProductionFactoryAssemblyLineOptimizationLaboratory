@@ -2,7 +2,18 @@
 
 An interactive, real-time discrete event simulation laboratory dashboard designed to model, analyze, and optimize production factory assembly line operations.
 
-![Application Preview](./screenshot.png)
+## Active Simulation Run Preview
+
+Here is the assembly line and real-time operational telemetry in action during a production run:
+
+### 1. Initialization and Processing Staged Items
+![Active Run Stage 1](./screenshot_active_1.png)
+
+### 2. Workstation Status and Buffer Queue Scaling
+![Active Run Stage 2](./screenshot_active_2.png)
+
+### 3. Continuous Simulation Logs and Metric Stream
+![Active Run Stage 3](./screenshot_active_3.png)
 
 ## Key Features
 
