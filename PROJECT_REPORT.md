@@ -10,7 +10,7 @@
 * **Project Title**: Production Factory Assembly Line Optimization Laboratory
 * **Institution**: ITM Skills University
 * **Course**: ReactJS Application Development — Case Study Submission
-* **Case Study Number**: 178
+* **Case Study Number**: 177
 
 ## 3.2 Student Details
 
@@ -18,7 +18,7 @@
 * **Cohort**: SAM ALTMAN
 * **Roll No**: 150096725136
 * **Institution**: ITM Skills University
-* **Case Study Number**: 178
+* **Case Study Number**: 177
 * **Subject**: ReactJS Case Study
 * **Submission Type**: Case Study Project Report
 
