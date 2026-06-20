@@ -1,6 +1,6 @@
 # Production Factory Assembly Line Optimization Laboratory
 
-> **ITM Skills University | Case Study #178**  
+> **ITM Skills University | Case Study #177**  
 > A high-performance, real-time discrete event simulation laboratory dashboard built in **React.js & Vite** with Vanilla CSS, designed to model, analyze, and optimize production factory assembly line operations.
 
 ---
